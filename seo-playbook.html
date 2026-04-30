@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Complete SEO Playbook — From Zero to Rank #1</title>
+<meta name="description" content="A step-by-step plan to take any website to the top of Google, explained through a freelancer portfolio example." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Editorial typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #faf6ee;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #3a342c;
+    --muted: #6b6253;
+    --border: #e8ddc8;
+    --accent: #a04a2a;
+    --accent-dark: #6b3017;
+    --moss: #4a5a3a;
+    --paper: #f3ecdc;
+  }
+
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.7;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(160, 74, 42, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 60%, rgba(74, 90, 58, 0.03) 0%, transparent 40%);
+  }
+
+  .display { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.02em; }
+  .display-light { font-family: 'Fraunces', Georgia, serif; font-weight: 300; letter-spacing: -0.02em; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  .prose-body p { margin-bottom: 1.4em; }
+  .prose-body p + p { margin-top: 0; }
+
+  .drop-cap::first-letter {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    float: left;
+    font-size: 5.2em;
+    line-height: 0.85;
+    padding-right: 0.12em;
+    padding-top: 0.08em;
+    color: var(--accent);
+  }
+
+  .phase-number {
+    font-family: 'Fraunces', serif;
+    font-weight: 200;
+    font-size: clamp(120px, 18vw, 280px);
+    line-height: 0.85;
+    color: var(--accent);
+    letter-spacing: -0.05em;
+  }
+
+  .phase-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .pull-quote {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+
+  .pull-quote::before {
+    content: "“";
+    font-size: 2em;
+    line-height: 0;
+    vertical-align: -0.4em;
+    color: var(--accent);
+    margin-right: 0.05em;
+  }
+
+  .ladder-rung {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .ladder-rung:hover {
+    transform: translateX(8px);
+    border-color: var(--accent);
+  }
+
+  .ascii-box {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .table-editorial {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table-editorial th {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--ink);
+    background: var(--paper);
+  }
+  .table-editorial td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .table-editorial tr:hover td {
+    background: rgba(160, 74, 42, 0.03);
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--accent);
+    margin: 60px 0;
+  }
+  .ornament::before, .ornament::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    max-width: 80px;
+    background: var(--border);
+  }
+
+  .checklist-item {
+    position: relative;
+    padding-left: 28px;
+  }
+  .checklist-item::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .lift-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    padding: 24px 28px;
+  }
+
+  .myth-box {
+    background: linear-gradient(180deg, var(--paper) 0%, var(--surface) 100%);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  .hero-img-frame {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-img-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(26,26,26,0.0) 0%, rgba(26,26,26,0.45) 70%, rgba(26,26,26,0.7) 100%);
+  }
+
+  .figure-caption {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 12px;
+    letter-spacing: 0.01em;
+  }
+
+  a.inline-link {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  a.inline-link:hover { color: var(--accent); }
+
+  .toc-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-soft);
+    transition: color 0.2s, padding 0.2s;
+    font-family: 'Fraunces', serif;
+  }
+  .toc-link:hover {
+    color: var(--accent);
+    padding-left: 8px;
+  }
+  .toc-link span:last-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .drop-cap::first-letter { font-size: 4em; }
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* Selection */
+  ::selection { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+
+<body>
+
+<!-- ====================================================== -->
+<!-- TOP BAR -->
+<!-- ====================================================== -->
+<header class="border-b" style="border-color: var(--border); background: var(--bg);">
+  <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-full flex items-center justify-center display" style="background: var(--ink); color: var(--bg); font-size: 20px;">↗</div>
+      <span class="display text-lg" style="color: var(--ink);">The Playbook</span>
+    </div>
+    <div class="mono text-xs hidden md:block" style="color: var(--muted); letter-spacing: 0.2em;">EDITION ONE · 2026</div>
+  </div>
+</header>
+
+
+<!-- ====================================================== -->
+<!-- HERO -->
+<!-- ====================================================== -->
+<section class="relative">
+  <div class="hero-img-frame absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=2000&q=80&auto=format&fit=crop" alt="Misty mountain peaks at sunrise" />
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 py-32 md:py-48">
+    <div class="mono text-xs mb-6" style="color: #f3ecdc; letter-spacing: 0.3em;">A FIELD MANUAL · 12 MIN READ</div>
+    <h1 class="display text-white" style="font-size: clamp(48px, 8vw, 96px); line-height: 1; font-weight: 400; letter-spacing: -0.03em;">
+      From Zero<br>
+      <span style="font-style: italic; font-weight: 300;">to Rank</span> #1.
+    </h1>
+    <p class="mt-8 max-w-xl text-xl md:text-2xl display-light" style="color: #f3ecdc; line-height: 1.4;">
+      A complete, step-by-step SEO plan to take a brand new website to the top of Google — explained through the example of a freelancer's portfolio.
+    </p>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- HOW TO READ + TOC -->
+<!-- ====================================================== -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+  <div class="grid md:grid-cols-3 gap-12">
+    <div class="md:col-span-1">
+      <div class="phase-eyebrow mb-3">How to read this</div>
+      <p class="display text-2xl leading-snug" style="color: var(--ink);">
+        Read it in order. Don't skip ahead.
+      </p>
+      <p class="mt-4" style="color: var(--muted); font-size: 17px;">
+        Every phase builds on the last one. The biggest reason websites fail is doing on-page work before earning the right to rank — Phase 0 and Phase 1 decide whether everything else compounds, or wastes your time.
+      </p>
+    </div>
+
+    <div class="md:col-span-2">
+      <div class="phase-eyebrow mb-4">Contents</div>
+      <a href="#mental-model" class="toc-link"><span>The Mental Model</span><span>00</span></a>
+      <a href="#phase-0" class="toc-link"><span>Strategic Foundation</span><span>01</span></a>
+      <a href="#phase-1" class="toc-link"><span>Keyword Research &amp; the KD Ladder</span><span>02</span></a>
+      <a href="#phase-2" class="toc-link"><span>Technical SEO Foundation</span><span>03</span></a>
+      <a href="#phase-3" class="toc-link"><span>On-Page SEO</span><span>04</span></a>
+      <a href="#phase-4" class="toc-link"><span>Site Architecture</span><span>05</span></a>
+      <a href="#phase-5" class="toc-link"><span>Content Strategy</span><span>06</span></a>
+      <a href="#phase-6" class="toc-link"><span>E-E-A-T</span><span>07</span></a>
+      <a href="#phase-7" class="toc-link"><span>Off-Page &amp; Link Building</span><span>08</span></a>
+      <a href="#phase-8" class="toc-link"><span>Local SEO</span><span>09</span></a>
+      <a href="#phase-9" class="toc-link"><span>Measurement &amp; Iteration</span><span>10</span></a>
+      <a href="#phase-10" class="toc-link"><span>The KD Climb Playbook</span><span>11</span></a>
+      <a href="#mistakes" class="toc-link"><span>Common Mistakes</span><span>12</span></a>
+      <a href="#calendar" class="toc-link"><span>12-Month Calendar</span><span>13</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- MENTAL MODEL -->
+<!-- ====================================================== -->
+<section id="mental-model" class="max-w-3xl mx-auto px-6 py-20">
+  <div class="phase-eyebrow mb-4">Chapter 00</div>
+  <h2 class="display text-5xl md:text-6xl leading-tight mb-10" style="font-weight: 400;">
+    Why most SEO plans fail.
+  </h2>
+
+  <div class="prose-body" style="color: var(--ink-soft);">
+    <p class="drop-cap">
+      Here's the truth most SEO guides skip past: Google doesn't actually rank <em>pages</em>. It ranks <em>answers to questions, from sources it trusts.</em> Once you understand that, everything else changes.
+    </p>
+
+    <p>
+      A brand new website has zero trust. So when beginners try to rank for a tough keyword like "freelance web designer" on day one, they're asking Google to trust them with the most contested spot in the niche. Google won't. No amount of on-page tricks can fix a trust problem.
+    </p>
+
+    <p>
+      The right approach is what I call a <strong>trust ladder</strong>. You earn the right to rank for harder keywords by first owning easier ones nearby. Every low-difficulty page you rank deposits a little bit into your topical authority bank. When the balance is high enough, Google starts considering you for the big keywords.
+    </p>
+
+    <p>This document walks through exactly how to build that balance.</p>
+  </div>
+
+  <!-- example callout -->
+  <div class="lift-box mt-12">
+    <div class="phase-eyebrow mb-3" style="color: var(--moss);">Worked Example</div>
+    <p style="font-size: 18px; color: var(--ink-soft); margin: 0;">
+      Throughout this playbook, we'll follow <strong>"Alex"</strong> — a freelance web designer based in Colombo. He eventually wants to rank #1 for <strong>"freelance web designer"</strong> (very high difficulty, ~70+) and <strong>"freelance web designer Sri Lanka"</strong> (medium, ~30).
+    </p>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 0 -->
+<!-- ====================================================== -->
+<section id="phase-0" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">01</div>
+        <div class="phase-eyebrow mt-4">Phase 0 · Week Zero</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Strategic foundation.<br>
+          <span style="font-style: italic; color: var(--muted);">Before you touch any code.</span>
+        </h2>
+
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">
+          You can't SEO your way out of a bad strategic position. Get these three things right first.
+        </p>
+
+        <!-- 0.1 -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">0.1 &nbsp; Pick a niche you can defend</h3>
+          <div class="prose-body" style="color: var(--ink-soft);">
+            <p>"Freelance web designer" is too broad for a new site to ever own. You need to narrow until you find a wedge. There are three ways to narrow:</p>
+            <ul class="list-none space-y-2 my-6">
+              <li class="checklist-item"><strong>By industry</strong> — "freelance web designer for dentists," "for SaaS startups," "for restaurants"</li>
+              <li class="checklist-item"><strong>By technology</strong> — "Webflow freelance designer," "Shopify freelance designer," "Framer specialist"</li>
+              <li class="checklist-item"><strong>By location</strong> — "freelance web designer in Colombo," "in Western Province"</li>
+            </ul>
+            <p>Alex picks his wedge: <strong>"Webflow designer for early-stage SaaS startups, based in Sri Lanka, serving global clients."</strong> The portfolio still serves broader clients, but the <em>content strategy</em> targets this wedge until authority is built. Then you expand outward.</p>
+          </div>
+        </div>
+
+        <!-- 0.2 -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">0.2 &nbsp; Map your buyer's search behavior</h3>
+          <p class="mb-6" style="color: var(--ink-soft);">
+            Before keyword research, write down: <em>who is the buyer, and what do they search at each stage?</em>
+          </p>
+
+          <table class="table-editorial mb-6">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>What they search</th>
+                <th>Intent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Unaware</td><td>"why is my SaaS landing page not converting"</td><td>Informational</td></tr>
+              <tr><td>Problem-aware</td><td>"how to redesign a SaaS website"</td><td>Informational</td></tr>
+              <tr><td>Solution-aware</td><td>"Webflow vs Framer for SaaS sites"</td><td>Commercial</td></tr>
+              <tr><td>Vendor-aware</td><td>"freelance Webflow designer for SaaS"</td><td>Transactional</td></tr>
+              <tr><td>Decision</td><td>"[Alex's name] portfolio"</td><td>Branded</td></tr>
+            </tbody>
+          </table>
+
+          <p style="color: var(--ink-soft);">Most freelancers only build pages for the bottom two stages. That's exactly why they don't rank. You need to build for all five.</p>
+        </div>
+
+        <!-- 0.3 -->
+        <div>
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">0.3 &nbsp; Study the SERP before you write anything</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">For every keyword you target, the top 10 results <em>are</em> your brief. Open the search results and write down:</p>
+          <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+            <li class="checklist-item">What kind of pages rank? (lists, service pages, blog posts, directories, YouTube)</li>
+            <li class="checklist-item">Average word count of the ranking pages</li>
+            <li class="checklist-item">Common subtopics they all cover</li>
+            <li class="checklist-item">What entities (people, companies, technologies) keep getting mentioned</li>
+            <li class="checklist-item">What special features show up (AI Overview, People Also Ask, Map Pack, Video Carousel)</li>
+            <li class="checklist-item">What the ranking pages <em>don't</em> do well — that's your opening</li>
+          </ul>
+          <p class="mt-6" style="color: var(--ink-soft);">If the top 10 are all directory pages (Upwork, Fiverr, Toptal), a single freelancer's portfolio will struggle there. Pick a different keyword where individual sites can rank.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PULL IMAGE -->
+<!-- ====================================================== -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=1600&q=80&auto=format&fit=crop"
+         alt="Open notebook with pen on a wooden desk"
+         class="w-full h-[400px] md:h-[500px] object-cover" />
+    <figcaption class="figure-caption">Strategy comes first. Always before the keyboard.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 1 — KEYWORD RESEARCH + KD LADDER -->
+<!-- ====================================================== -->
+<section id="phase-1" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">02</div>
+        <div class="phase-eyebrow mt-4">Phase 1</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Keyword research<br>
+          <span style="font-style: italic; color: var(--muted);">and the KD Ladder.</span>
+        </h2>
+
+        <!-- The KD Ladder -->
+        <div class="mb-16">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">1.1 &nbsp; The KD Ladder — the heart of your question</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">
+            Keyword Difficulty (KD) tracks how many strong backlinks the ranking pages have. A new site can't beat that on day one. The ladder solves it:
+          </p>
+
+          <!-- Visual Ladder -->
+          <div class="space-y-3 my-8">
+            <div class="ladder-rung p-5 ml-0">
+              <div class="flex items-baseline justify-between gap-4">
+                <div>
+                  <div class="phase-eyebrow mb-1">Rung 4 · KD 60–90</div>
+                  <div class="display text-xl">Head terms</div>
+                </div>
+                <div class="mono text-sm" style="color: var(--muted);">"freelance web designer"</div>
+              </div>
+            </div>
+            <div class="ladder-rung p-5 ml-4 md:ml-12">
+              <div class="flex items-baseline justify-between gap-4">
+                <div>
+                  <div class="phase-eyebrow mb-1">Rung 3 · KD 30–50</div>
+                  <div class="display text-xl">Mid-tail commercial</div>
+                </div>
+                <div class="mono text-sm" style="color: var(--muted);">"hire freelance Webflow designer"</div>
+              </div>
+            </div>
+            <div class="ladder-rung p-5 ml-8 md:ml-24">
+              <div class="flex items-baseline justify-between gap-4">
+                <div>
+                  <div class="phase-eyebrow mb-1">Rung 2 · KD 15–30</div>
+                  <div class="display text-xl">Long-tail commercial</div>
+                </div>
+                <div class="mono text-sm" style="color: var(--muted);">"freelance Webflow designer for SaaS"</div>
+              </div>
+            </div>
+            <div class="ladder-rung p-5 ml-12 md:ml-36">
+              <div class="flex items-baseline justify-between gap-4">
+                <div>
+                  <div class="phase-eyebrow mb-1">Rung 1 · KD 0–15</div>
+                  <div class="display text-xl">Long-tail informational</div>
+                </div>
+                <div class="mono text-sm" style="color: var(--muted);">"how much does a Webflow site cost for a startup"</div>
+              </div>
+            </div>
+          </div>
+
+          <p style="color: var(--ink-soft);">
+            <strong>How it works:</strong> every time you rank a Rung 1 page, you earn a few backlinks, some user signals, and topical relevance for your domain. Those signals make Rung 2 pages easier to rank. Rung 2 pages reinforce Rung 3. The site climbs the ladder, one rung at a time.
+          </p>
+
+          <div class="lift-box mt-8">
+            <div class="phase-eyebrow mb-3">Critical rule</div>
+            <p style="margin: 0; color: var(--ink-soft);">
+              All rungs must live in the <em>same topical neighborhood</em>. Ranking for "best banana bread recipe" does <strong>not</strong> help you rank for "freelance web designer." Topical authority is topic-specific.
+            </p>
+          </div>
+        </div>
+
+        <!-- 1.2 Building keyword universe -->
+        <div class="mb-16">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">1.2 &nbsp; Building the keyword universe</h3>
+          <p class="mb-6" style="color: var(--ink-soft);">Use a layered approach. Don't just dump a tool's keyword list into a spreadsheet.</p>
+
+          <div class="space-y-6">
+            <div>
+              <div class="display text-lg" style="color: var(--accent); font-weight: 600;">Layer 1 — Seed keywords (30 minutes, manual)</div>
+              <p style="color: var(--ink-soft);">Brainstorm 20–40 seed terms covering services, technologies, problems, and outcomes your buyers care about. For Alex: "Webflow design," "SaaS landing page," "conversion rate optimization," "website redesign," "freelance designer rates."</p>
+            </div>
+
+            <div>
+              <div class="display text-lg" style="color: var(--accent); font-weight: 600;">Layer 2 — Tool expansion</div>
+              <p style="color: var(--ink-soft);">Use Ahrefs, Semrush, or free tools (Google Keyword Planner, AnswerThePublic, Keywords Everywhere). For each seed, pull matching terms, related terms, question terms (who/what/why/how), and comparison terms (X vs Y).</p>
+            </div>
+
+            <div>
+              <div class="display text-lg" style="color: var(--accent); font-weight: 600;">Layer 3 — SERP mining</div>
+              <p style="color: var(--ink-soft);">Click into "People Also Ask" boxes (they expand the more you click). Read "Related searches" at the bottom. Hunt Reddit, Quora, IndieHackers, and niche forums for raw user language. Try YouTube autocomplete for different intent.</p>
+            </div>
+
+            <div>
+              <div class="display text-lg" style="color: var(--accent); font-weight: 600;">Layer 4 — Competitor gaps</div>
+              <p style="color: var(--ink-soft);">Take 3–5 sites already ranking in your wedge. Run them through a tool's "organic keywords" report. Filter for keywords <em>they</em> rank for that <em>you</em> don't. These are validated opportunities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1.3 Scoring -->
+        <div class="mb-16">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">1.3 &nbsp; Score and prioritize</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">For each keyword, capture:</p>
+
+          <table class="table-editorial">
+            <thead>
+              <tr><th>Field</th><th>Why it matters</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Search volume</td><td>How big is the demand</td></tr>
+              <tr><td>Keyword Difficulty</td><td>How much effort it takes</td></tr>
+              <tr><td>Search intent</td><td>What page type to build</td></tr>
+              <tr><td>Business value (1–5)</td><td>How close to revenue</td></tr>
+              <tr><td>SERP features</td><td>Whether clicks even reach pages</td></tr>
+              <tr><td>CPC</td><td>Proxy for commercial value</td></tr>
+              <tr><td>Top page authority</td><td>Realistic threshold to compete</td></tr>
+            </tbody>
+          </table>
+
+          <p class="mt-6 mb-3" style="color: var(--ink-soft);">Then compute a rough <strong>Priority Score</strong>:</p>
+
+          <div class="ascii-box p-5 my-4">Priority = (Volume × Business Value) / (KD × SERP feature dilution)</div>
+
+          <p style="color: var(--ink-soft);">This surfaces high-leverage, low-effort terms. Tackle those first. Sort the whole keyword universe by priority — that's your content roadmap.</p>
+        </div>
+
+        <!-- 1.4 Intent -->
+        <div>
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">1.4 &nbsp; Classify search intent (don't skip this)</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">Every keyword maps to exactly one of four intents. The page type has to match:</p>
+          <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+            <li class="checklist-item"><strong>Informational</strong> → blog post, guide, tutorial</li>
+            <li class="checklist-item"><strong>Navigational</strong> → branded landing page or homepage</li>
+            <li class="checklist-item"><strong>Commercial</strong> → comparison, listicle, review</li>
+            <li class="checklist-item"><strong>Transactional</strong> → service page, pricing, contact</li>
+          </ul>
+
+          <div class="lift-box mt-8">
+            <p style="margin: 0; color: var(--ink-soft);">
+              If you write a blog post for a transactional keyword, you won't rank — Google wants to show service pages there. <strong>Mismatched intent is the #1 on-page reason rankings fail.</strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PULL QUOTE -->
+<!-- ====================================================== -->
+<section class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-3xl mx-auto px-6 py-24">
+    <p class="pull-quote">
+      Technical SEO doesn't make you rank. It removes the ceilings that would otherwise stop you from ranking.
+    </p>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 2 — TECHNICAL SEO -->
+<!-- ====================================================== -->
+<section id="phase-2" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">03</div>
+        <div class="phase-eyebrow mt-4">Phase 2</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Technical SEO foundation.
+        </h2>
+
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">
+          Get it right once. Audit it every quarter.
+        </p>
+
+        <div class="space-y-12">
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.1 &nbsp; Crawlability and indexability</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item"><strong>robots.txt:</strong> only block what genuinely shouldn't be crawled (cart pages, internal search, staging). Never block CSS or JS — Google needs them to render.</li>
+              <li class="checklist-item"><strong>XML sitemap:</strong> auto-generated, segmented if large, submitted to Google Search Console and Bing Webmaster Tools.</li>
+              <li class="checklist-item"><strong>noindex audit:</strong> open GSC → Pages → "Excluded by 'noindex' tag." Anything important here is a bug.</li>
+              <li class="checklist-item"><strong>Canonical tags:</strong> every indexable page gets a self-referencing canonical. All variants point to one version.</li>
+              <li class="checklist-item"><strong>HTTP status codes:</strong> 200 for live pages, 301 for permanent moves, 404 for genuinely gone, 410 for intentionally removed-forever. Never 302 for permanent moves. Never soft-404s.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.2 &nbsp; Site speed and Core Web Vitals</h3>
+            <p class="mb-4" style="color: var(--ink-soft);">As of 2026, the three Core Web Vitals are LCP, INP, and CLS. Targets:</p>
+            <div class="grid sm:grid-cols-3 gap-4 my-4">
+              <div class="lift-box" style="border-left-color: var(--moss);">
+                <div class="phase-eyebrow mb-1" style="color: var(--moss);">LCP</div>
+                <div class="display text-3xl mb-2">&lt; 2.5s</div>
+                <p class="text-sm" style="color: var(--muted); margin: 0;">Largest Contentful Paint. Usually your hero image. Preload it, serve WebP/AVIF, use a CDN.</p>
+              </div>
+              <div class="lift-box" style="border-left-color: var(--moss);">
+                <div class="phase-eyebrow mb-1" style="color: var(--moss);">INP</div>
+                <div class="display text-3xl mb-2">&lt; 200ms</div>
+                <p class="text-sm" style="color: var(--muted); margin: 0;">Interaction to Next Paint. Replaces FID. Cut main-thread JS, defer non-critical scripts.</p>
+              </div>
+              <div class="lift-box" style="border-left-color: var(--moss);">
+                <div class="phase-eyebrow mb-1" style="color: var(--moss);">CLS</div>
+                <div class="display text-3xl mb-2">&lt; 0.1</div>
+                <p class="text-sm" style="color: var(--muted); margin: 0;">Cumulative Layout Shift. Set width/height on images, reserve space for embeds.</p>
+              </div>
+            </div>
+            <p style="color: var(--ink-soft);">Measure with PageSpeed Insights, then verify in real-user data via GSC's Core Web Vitals report (that's what Google actually uses).</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.3 &nbsp; Mobile first</h3>
+            <p style="color: var(--ink-soft);">Google indexes the mobile version of your site. Test on a real phone, not just devtools. Tap targets at least 48px, no horizontal scroll, no annoying interstitials, fonts at least 16px (smaller and iOS zooms).</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.4 &nbsp; Structured data (schema.org)</h3>
+            <p class="mb-4" style="color: var(--ink-soft);">Schema doesn't directly improve rankings. It unlocks rich results that increase click-through rate — and CTR feeds back into rankings indirectly. For Alex's portfolio:</p>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item"><span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">Person</span> schema on the About page (name, jobTitle, sameAs links to LinkedIn / Twitter / Behance)</li>
+              <li class="checklist-item"><span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">ProfessionalService</span> or <span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">LocalBusiness</span> on homepage and service pages</li>
+              <li class="checklist-item"><span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">Article</span> + <span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">BreadcrumbList</span> on blog posts</li>
+              <li class="checklist-item"><span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">FAQPage</span> on pages with real, visible Q&amp;A (Google penalizes hidden FAQ schema)</li>
+              <li class="checklist-item"><span class="mono text-sm" style="background: var(--paper); padding: 2px 8px;">CreativeWork</span> on portfolio case studies</li>
+            </ul>
+            <p class="mt-4" style="color: var(--ink-soft);">Validate with the Rich Results Test and Schema.org validator.</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.5 &nbsp; Architecture and URL structure</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">URLs are short, lowercase, hyphenated, descriptive: <span class="mono text-sm">/services/webflow-design</span> — not <span class="mono text-sm">/p?id=482</span></li>
+              <li class="checklist-item">URL depth ≤ 3 levels for important pages</li>
+              <li class="checklist-item">One canonical URL per topic. Don't fragment with category/tag pages</li>
+              <li class="checklist-item">301 any URL change. Never break a URL with external links pointing to it</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.6 &nbsp; JavaScript rendering</h3>
+            <p style="color: var(--ink-soft);">If your site is built with React, Vue, or Next, make sure pages are server-rendered or pre-rendered. Test in GSC's URL Inspection tool — view the rendered HTML and confirm your content is actually there. Client-side-only rendering is a top reason new sites' content stays invisible to Google.</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.7 &nbsp; Internal linking foundations</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Every page reachable in 3 clicks or less from the homepage</li>
+              <li class="checklist-item">No orphan pages (pages with zero internal links pointing to them)</li>
+              <li class="checklist-item">Anchor text varied and descriptive — never "click here"</li>
+              <li class="checklist-item">Strategically link from high-authority pages (homepage, top blog posts) toward your money pages</li>
+            </ul>
+            <p class="mt-4" style="color: var(--ink-soft);">We'll exploit internal linking structurally in Phase 5.</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">2.8 &nbsp; Security and trust</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">HTTPS everywhere with a valid certificate, HSTS header</li>
+              <li class="checklist-item">A real privacy policy and terms page (yes, Google looks)</li>
+              <li class="checklist-item">A real contact page with real contact info</li>
+              <li class="checklist-item">For freelance/service sites: visible address, phone, business registration where applicable</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- DATA IMAGE -->
+<!-- ====================================================== -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop"
+         alt="Data analytics dashboard with charts"
+         class="w-full h-[400px] md:h-[500px] object-cover" />
+    <figcaption class="figure-caption">Measure what matters. Ignore the rest.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 3 — ON PAGE -->
+<!-- ====================================================== -->
+<section id="phase-3" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">04</div>
+        <div class="phase-eyebrow mt-4">Phase 3</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          On-page SEO.
+        </h2>
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">For every page you build, these are non-negotiable.</p>
+
+        <div class="space-y-10">
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.1 &nbsp; Title tag</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Primary keyword near the front</li>
+              <li class="checklist-item">Under ~60 characters to avoid truncation</li>
+              <li class="checklist-item">Include a value modifier ("2026," "for SaaS," "with case studies")</li>
+              <li class="checklist-item">Unique across the site</li>
+            </ul>
+            <div class="ascii-box p-4 mt-4">Freelance Webflow Designer for SaaS Startups | Alex Perera</div>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.2 &nbsp; Meta description</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Doesn't directly rank, but drives click-through</li>
+              <li class="checklist-item">Under ~155 characters</li>
+              <li class="checklist-item">Include the primary keyword (Google bolds it in results)</li>
+              <li class="checklist-item">Have a clear call to action</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.3 &nbsp; Headings and content structure</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Exactly one H1, with the primary keyword (or close variant)</li>
+              <li class="checklist-item">H2s for major sections, H3s nested under them</li>
+              <li class="checklist-item">Headings follow real user intent, not keyword stuffing</li>
+              <li class="checklist-item">Use the SERP's "People Also Ask" questions as your H2s and H3s — Google has already told you what users want</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.4 &nbsp; Content depth and entity coverage</h3>
+            <p style="color: var(--ink-soft);">Modern Google ranks based on <strong>entity coverage</strong>, not keyword density. For "freelance Webflow designer for SaaS," ranking pages will mention entities like: Webflow, CMS, conversion rate, landing page, A/B testing, B2B, ICP, MVP, design system, Figma. Map and cover the entities the ranking pages share.</p>
+            <p class="mt-4" style="color: var(--ink-soft);">Tools like Surfer, Frase, Clearscope, or NeuronWriter compute this for you. Or do it manually by reading the top 5 ranking pages and listing every distinct entity they cover.</p>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.5 &nbsp; Internal linking (per page)</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Each new page links out to 3–8 related pages on your site</li>
+              <li class="checklist-item">Each new page is linked to <em>from</em> at least 2–3 existing pages</li>
+              <li class="checklist-item">Anchor text uses keyword variations, not exact match every time</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.6 &nbsp; Image SEO</h3>
+            <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+              <li class="checklist-item">Descriptive filenames (<span class="mono text-sm">webflow-saas-redesign-before-after.webp</span>, not <span class="mono text-sm">IMG_4827.jpg</span>)</li>
+              <li class="checklist-item">Real alt text describing the image (also helps accessibility)</li>
+              <li class="checklist-item">WebP or AVIF format, compressed</li>
+              <li class="checklist-item">Width and height attributes set</li>
+              <li class="checklist-item">Lazy-load below-the-fold images (<span class="mono text-sm">loading="lazy"</span>)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="display text-2xl mb-3" style="font-weight: 600;">3.7 &nbsp; The "above the fold" audit</h3>
+            <p style="color: var(--ink-soft);">The top 600 pixels of every page should answer: <em>who, what, why-you</em>. New visitors decide in 3 seconds whether to stay. Bounce rate is a ranking signal — through dwell-time inferences.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 4 — ARCHITECTURE -->
+<!-- ====================================================== -->
+<section id="phase-4" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">05</div>
+        <div class="phase-eyebrow mt-4">Phase 4</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Site architecture<br>
+          <span style="font-style: italic; color: var(--muted);">for a freelancer portfolio.</span>
+        </h2>
+
+        <p class="text-xl mb-8" style="color: var(--ink-soft);">Here's the actual sitemap Alex builds:</p>
+
+        <div class="ascii-box p-6 my-4">/                               (Homepage — brand + primary service)
+/about                          (E-E-A-T anchor)
+/services/                      (Service hub)
+  /services/webflow-design
+  /services/saas-landing-pages
+  /services/website-redesign
+/portfolio/                     (Case study hub)
+  /portfolio/[client-1]
+  /portfolio/[client-2]
+  ...
+/blog/                          (Content hub)
+  /blog/[topical-cluster-1]/
+    /blog/article-1
+    /blog/article-2
+  /blog/[topical-cluster-2]/
+    ...
+/locations/                     (Local SEO, only if relevant)
+  /locations/colombo
+  /locations/sri-lanka
+/contact
+/privacy
+/terms</div>
+
+        <p class="mt-6" style="color: var(--ink-soft);">The hub-and-spoke structure is intentional: it concentrates internal link equity on the pages you most need to rank.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 5 — CONTENT STRATEGY (HEART OF DOC) -->
+<!-- ====================================================== -->
+<section id="phase-5" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">06</div>
+        <div class="phase-eyebrow mt-4">Phase 5</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          The topical authority<br>
+          <span style="font-style: italic; color: var(--muted);">flywheel.</span>
+        </h2>
+
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">This is where the KD ladder actually gets executed.</p>
+
+        <!-- 5.1 -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">5.1 &nbsp; The cluster model</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">For each money keyword (the high-KD term you ultimately want to rank for), build a <strong>pillar page</strong> + 8–20 <strong>supporting articles</strong> that all link to it.</p>
+
+          <div class="lift-box my-6">
+            <div class="phase-eyebrow mb-3">Example cluster: "Webflow designer for SaaS"</div>
+            <p class="mb-4" style="color: var(--ink-soft);"><strong>Pillar (the page that will eventually rank for the head term):</strong></p>
+            <p class="mono text-sm mb-6" style="color: var(--accent);">/services/webflow-design-for-saas</p>
+
+            <p class="mb-3" style="color: var(--ink-soft);"><strong>Supporting spokes (each ranks for a long-tail Rung 1 or Rung 2 keyword):</strong></p>
+            <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-sm" style="color: var(--ink-soft);">
+              <div>1. How much does a Webflow site cost for a SaaS startup</div>
+              <div>2. Webflow vs Framer for B2B SaaS in 2026</div>
+              <div>3. How long to build a SaaS landing page in Webflow</div>
+              <div>4. SaaS landing page conversion rate benchmarks</div>
+              <div>5. Above-the-fold patterns for SaaS homepages</div>
+              <div>6. How to brief a freelance Webflow designer</div>
+              <div>7. Webflow CMS for SaaS blogs — setup guide</div>
+              <div>8. Migrating from WordPress to Webflow</div>
+              <div>9. Webflow client handoff checklist</div>
+              <div>10. Common Webflow design mistakes on SaaS sites</div>
+              <div>11. How to A/B test a Webflow landing page</div>
+              <div>12. SaaS website redesign: full process</div>
+              <div>13. Hiring an agency vs a freelancer</div>
+              <div>14. Webflow designer rates explained</div>
+              <div>15. Pre-launch SaaS website checklist</div>
+            </div>
+          </div>
+
+          <p class="mb-3" style="color: var(--ink-soft);">Each spoke:</p>
+          <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+            <li class="checklist-item">Targets one specific long-tail keyword</li>
+            <li class="checklist-item">Internally links to the pillar with varied anchor text</li>
+            <li class="checklist-item">Links to 2–3 other spokes in the cluster</li>
+          </ul>
+
+          <p class="mt-6" style="color: var(--ink-soft);">The pillar links <em>out</em> to the spokes. It doesn't need link juice from them in raw PageRank terms — what it gets is <em>topical proof</em> that this site covers the entire neighborhood.</p>
+        </div>
+
+        <!-- 5.2 Why it works -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">5.2 &nbsp; Why this works mechanically</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">When Google evaluates a page for a query, it looks at three dimensions:</p>
+          <ol class="list-none space-y-3 my-4" style="color: var(--ink-soft);">
+            <li class="flex gap-4"><span class="display text-2xl" style="color: var(--accent); line-height: 1;">1</span><span>Does this page match the query? <em style="color: var(--muted);">(on-page relevance)</em></span></li>
+            <li class="flex gap-4"><span class="display text-2xl" style="color: var(--accent); line-height: 1;">2</span><span>Does the rest of the site demonstrate expertise on this topic? <em style="color: var(--muted);">(topical authority)</em></span></li>
+            <li class="flex gap-4"><span class="display text-2xl" style="color: var(--accent); line-height: 1;">3</span><span>Do trustworthy external signals back this up? <em style="color: var(--muted);">(backlinks, mentions, engagement)</em></span></li>
+          </ol>
+          <p style="color: var(--ink-soft);">Without a topical cluster, dimension #2 is empty. Dimension #1 alone won't beat established competitors. The cluster builds dimension #2 systematically.</p>
+        </div>
+
+        <!-- 5.3 Cadence -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">5.3 &nbsp; Publishing cadence and depth</h3>
+          <ul class="list-none space-y-3" style="color: var(--ink-soft);">
+            <li class="checklist-item"><strong>Quality threshold:</strong> every article ≥ 1,500 words is a <em>minimum</em>, not a goal. Match the depth of ranking competitors. Some informational queries need 3,000+ words. Some commercial pages convert better at 800.</li>
+            <li class="checklist-item"><strong>Cadence:</strong> 2–4 high-quality articles per week if you're solo. Consistency beats volume — Google favors regularly updated sites. But thin or AI-generated filler is now actively penalized by the Helpful Content System.</li>
+            <li class="checklist-item"><strong>Originality:</strong> include things only <em>you</em> can include. Real screenshots from real projects. Original data ("I analyzed 50 SaaS landing pages and found…"). Personal experience and opinions. This is the strongest signal of authentic expertise.</li>
+          </ul>
+        </div>
+
+        <!-- 5.4 Sequencing -->
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">5.4 &nbsp; The climb — sequencing the ladder</h3>
+
+          <div class="space-y-4 my-6">
+            <div class="flex gap-6 p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="display text-3xl" style="color: var(--accent); min-width: 90px;">M 1–2</div>
+              <div style="color: var(--ink-soft);">Publish 8–15 Rung 1 articles (KD 0–15). Goal: first organic clicks, validate the topic, see what resonates.</div>
+            </div>
+            <div class="flex gap-6 p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="display text-3xl" style="color: var(--accent); min-width: 90px;">M 3–5</div>
+              <div style="color: var(--ink-soft);">Another 15–20 articles, mixing Rung 1 and Rung 2 (KD 15–30). Build out the cluster around the pillar. Internal-link aggressively.</div>
+            </div>
+            <div class="flex gap-6 p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="display text-3xl" style="color: var(--accent); min-width: 90px;">M 4–6</div>
+              <div style="color: var(--ink-soft);">Start light link-building (Phase 7). Begin updating early articles based on GSC query data — refresh, expand, republish.</div>
+            </div>
+            <div class="flex gap-6 p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="display text-3xl" style="color: var(--accent); min-width: 90px;">M 6–9</div>
+              <div style="color: var(--ink-soft);">Push into Rung 3 (KD 30–50). Publish the pillar pages now if not already live; they should benefit from all the cluster signal you've built.</div>
+            </div>
+            <div class="flex gap-6 p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="display text-3xl" style="color: var(--accent); min-width: 90px;">M 9–12+</div>
+              <div style="color: var(--ink-soft);">Target Rung 4 head terms with the pillars. By now you should have 50–80 ranking pages, real backlinks, brand searches, topical credibility. Head terms become reachable.</div>
+            </div>
+          </div>
+
+          <p style="color: var(--ink-soft);">This is the climb, made concrete.</p>
+        </div>
+
+        <!-- 5.5 Refresh -->
+        <div>
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">5.5 &nbsp; Content refresh — the underrated multiplier</h3>
+          <p class="mb-4" style="color: var(--ink-soft);">Republishing wins. Every quarter:</p>
+          <ul class="list-none space-y-2" style="color: var(--ink-soft);">
+            <li class="checklist-item">Pull GSC's "queries" report for each page</li>
+            <li class="checklist-item">For pages ranking #5–#20 for relevant queries, expand the page to cover those queries</li>
+            <li class="checklist-item">Update statistics, screenshots, and the year in titles</li>
+            <li class="checklist-item">Update the publication date when material changes happen</li>
+            <li class="checklist-item">Resubmit to GSC</li>
+          </ul>
+          <p class="mt-4" style="color: var(--ink-soft);">Refreshed content often outperforms new content because it inherits existing internal links and external signals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- BOOKS IMAGE -->
+<!-- ====================================================== -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80&auto=format&fit=crop"
+         alt="Stack of books on a desk"
+         class="w-full h-[400px] md:h-[500px] object-cover" />
+    <figcaption class="figure-caption">Topical authority is built page by page, like a library.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 6 — E-E-A-T -->
+<!-- ====================================================== -->
+<section id="phase-6" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">07</div>
+        <div class="phase-eyebrow mt-4">Phase 6</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          E-E-A-T<br>
+          <span style="font-style: italic; color: var(--muted);">for a portfolio site.</span>
+        </h2>
+        <p class="mb-3" style="color: var(--ink-soft); font-size: 17px;">Experience · Expertise · Authoritativeness · Trust</p>
+
+        <p class="text-xl mb-10 mt-6" style="color: var(--ink-soft);">
+          Since Google's December 2022 update, E-E-A-T applies broadly — not just to "Your Money or Your Life" topics. For a service-business site like a freelancer's portfolio, weak E-E-A-T means weak rankings.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="p-6" style="background: var(--surface); border: 1px solid var(--border);">
+            <div class="phase-eyebrow mb-2" style="color: var(--moss);">First E</div>
+            <h3 class="display text-xl mb-3" style="font-weight: 600;">Experience</h3>
+            <p style="color: var(--ink-soft); font-size: 16px;">First-person language: "When I built this for…" Real photos of real work, not stock. Behind-the-scenes content: process, tools, screenshots. Original data and case studies with metrics.</p>
+          </div>
+
+          <div class="p-6" style="background: var(--surface); border: 1px solid var(--border);">
+            <div class="phase-eyebrow mb-2" style="color: var(--moss);">Second E</div>
+            <h3 class="display text-xl mb-3" style="font-weight: 600;">Expertise</h3>
+            <p style="color: var(--ink-soft); font-size: 16px;">Author bio on every article with credentials, photo, and links. A detailed /about page covering background, education, certifications, years of experience. Speaking engagements, podcast appearances, published articles elsewhere — list them. <span class="mono text-sm" style="background: var(--paper); padding: 2px 6px;">Person</span> schema with <span class="mono text-sm" style="background: var(--paper); padding: 2px 6px;">sameAs</span> linking to LinkedIn, GitHub, Behance, Dribbble.</p>
+          </div>
+
+          <div class="p-6" style="background: var(--surface); border: 1px solid var(--border);">
+            <div class="phase-eyebrow mb-2" style="color: var(--moss);">A</div>
+            <h3 class="display text-xl mb-3" style="font-weight: 600;">Authoritativeness</h3>
+            <p style="color: var(--ink-soft); font-size: 16px;">Clients you've worked with (logos with permission). Testimonials with full names, companies, links to their LinkedIn. Press mentions, awards, certifications. A consistent publishing presence.</p>
+          </div>
+
+          <div class="p-6" style="background: var(--surface); border: 1px solid var(--border);">
+            <div class="phase-eyebrow mb-2" style="color: var(--moss);">T</div>
+            <h3 class="display text-xl mb-3" style="font-weight: 600;">Trust</h3>
+            <p style="color: var(--ink-soft); font-size: 16px;">HTTPS, real privacy policy, real terms. Real contact information, ideally with a real address. Transparent pricing or pricing ranges. A genuine refund/guarantee policy where applicable. No deceptive design.</p>
+          </div>
+        </div>
+
+        <div class="lift-box mt-10">
+          <p style="margin: 0; color: var(--ink-soft);">
+            For a freelance portfolio specifically: <strong>your About page and case studies are your E-E-A-T workhorses.</strong> Don't treat them as afterthoughts. They should be among your most polished pages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 7 — LINK BUILDING -->
+<!-- ====================================================== -->
+<section id="phase-7" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">08</div>
+        <div class="phase-eyebrow mt-4">Phase 7</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Off-page SEO<br>
+          <span style="font-style: italic; color: var(--muted);">and link building.</span>
+        </h2>
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">Backlinks remain one of the strongest ranking signals. The best link is one a competitor can't easily replicate.</p>
+
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">7.1 &nbsp; The link hierarchy (best to worst)</h3>
+          <ol class="list-decimal pl-6 space-y-1" style="color: var(--ink-soft);">
+            <li>Editorial links from authoritative niche sites, given because your content is genuinely useful</li>
+            <li>Digital PR links — original research / data picked up by journalists</li>
+            <li>Guest posts on respected niche publications</li>
+            <li>Resource page inclusions</li>
+            <li>Podcast appearance show notes</li>
+            <li>Community contributions (genuine, not spammy)</li>
+            <li>Niche directory listings (relevant ones only)</li>
+            <li>Profile and citation links (for local SEO)</li>
+          </ol>
+
+          <div class="lift-box mt-6" style="border-left-color: #c0392b;">
+            <div class="phase-eyebrow mb-2" style="color: #c0392b;">Avoid</div>
+            <p style="margin: 0; color: var(--ink-soft);">PBNs, comment spam, link exchanges at scale, link farms, sponsored "do-follow" links without disclosure. Google's SpamBrain catches these and demotes the entire site, sometimes for good.</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">7.2 &nbsp; Tactics that actually work for a freelancer</h3>
+          <ul class="list-none space-y-4" style="color: var(--ink-soft);">
+            <li class="checklist-item"><strong>Original research / data studies.</strong> "I analyzed 100 Y Combinator SaaS homepages — here's what 80% get wrong." Pitch to industry newsletters, designers on Twitter, niche communities. Highest-ROI link-building tactic for a solo operator.</li>
+            <li class="checklist-item"><strong>HARO / Connectively / Featured / Help A B2B Writer.</strong> Respond to journalist queries in your area of expertise. Quoted = backlink + authority signal.</li>
+            <li class="checklist-item"><strong>Podcast tour.</strong> Book yourself on 5–10 niche podcasts. Each episode produces a backlink and brand awareness.</li>
+            <li class="checklist-item"><strong>Guest posts.</strong> Target 1–2 high-quality guest posts per month on niche publications. Pitch a real angle, not a generic post.</li>
+            <li class="checklist-item"><strong>Tool / resource creation.</strong> Build a free tool (e.g., a "SaaS landing page audit checklist," a "Webflow pricing calculator"). Tools naturally attract links.</li>
+            <li class="checklist-item"><strong>Community contribution.</strong> Be genuinely helpful in 2–3 communities (subreddits, IndieHackers, Designer News, niche Discords). Don't drop links — answer questions thoroughly. Links and brand searches follow naturally.</li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">7.3 &nbsp; Velocity and naturalness</h3>
+          <p style="color: var(--ink-soft);">Avoid sudden bursts. A new site getting 100 backlinks in week one looks unnatural. A steady curve — say, 2–10 quality links per month for the first year — looks like genuine growth.</p>
+        </div>
+
+        <div>
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">7.4 &nbsp; Brand mentions count even without links</h3>
+          <p style="color: var(--ink-soft);">Google detects unlinked mentions ("implied links") and weighs them. Showing up in industry conversations, even without a hyperlink, builds authority.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 8 — LOCAL -->
+<!-- ====================================================== -->
+<section id="phase-8" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">09</div>
+        <div class="phase-eyebrow mt-4">Phase 8</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Local SEO.
+        </h2>
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">If "freelance web designer Sri Lanka" matters to your business, local SEO is its own work.</p>
+
+        <ul class="list-none space-y-3" style="color: var(--ink-soft);">
+          <li class="checklist-item"><strong>Google Business Profile:</strong> claimed, fully completed, with categories, services, photos, and posts. Freelancers without a public storefront can register as a service-area business.</li>
+          <li class="checklist-item"><strong>NAP consistency:</strong> Name, Address, Phone identical across every directory and citation</li>
+          <li class="checklist-item"><strong>Local citations:</strong> industry-relevant local directories — be selective, quality over quantity</li>
+          <li class="checklist-item"><strong>Local landing pages:</strong> /locations/colombo should be genuinely useful, not a thin "we serve [city]" template</li>
+          <li class="checklist-item"><strong>Reviews:</strong> actively request from clients, respond to every one</li>
+          <li class="checklist-item"><strong>LocalBusiness schema</strong> with areaServed markup for the regions you cover</li>
+          <li class="checklist-item"><strong>Local backlinks:</strong> from local newspapers, business associations, universities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 9 — MEASUREMENT -->
+<!-- ====================================================== -->
+<section id="phase-9" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">10</div>
+        <div class="phase-eyebrow mt-4">Phase 9</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          Measurement<br>
+          <span style="font-style: italic; color: var(--muted);">and iteration.</span>
+        </h2>
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">You can't improve what you don't measure.</p>
+
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">9.1 &nbsp; The five tools you actually need</h3>
+          <ol class="list-decimal pl-6 space-y-2" style="color: var(--ink-soft);">
+            <li><strong>Google Search Console</strong> — the source of truth for what Google sees</li>
+            <li><strong>Google Analytics 4</strong> — user behavior on-site</li>
+            <li><strong>Bing Webmaster Tools</strong> — secondary, but free data</li>
+            <li><strong>A rank tracker</strong> (Ahrefs, Semrush, SerpRobot) — daily position tracking</li>
+            <li><strong>A crawler</strong> (Screaming Frog free up to 500 URLs) — quarterly site audits</li>
+          </ol>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">9.2 &nbsp; The dashboard</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="phase-eyebrow mb-3" style="color: var(--moss);">Track weekly</div>
+              <ul class="list-none space-y-1 text-sm" style="color: var(--ink-soft);">
+                <li>· Total clicks (GSC)</li>
+                <li>· Total impressions (GSC)</li>
+                <li>· Average position for tracked keywords</li>
+                <li>· Keywords on page 1, page 2, top 3</li>
+                <li>· New referring domains</li>
+                <li>· Core Web Vitals status</li>
+                <li>· Indexation count vs total pages</li>
+              </ul>
+            </div>
+            <div class="p-5" style="background: var(--surface); border: 1px solid var(--border);">
+              <div class="phase-eyebrow mb-3" style="color: var(--moss);">Track monthly</div>
+              <ul class="list-none space-y-1 text-sm" style="color: var(--ink-soft);">
+                <li>· Conversions (leads, calls, contacts)</li>
+                <li>· Conversion rate by landing page</li>
+                <li>· Revenue attributed to organic</li>
+                <li>· Top exit pages</li>
+                <li>· Bounce-heavy pages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="display text-2xl mb-4" style="font-weight: 600;">9.3 &nbsp; The quarterly iteration loop</h3>
+          <ol class="list-none space-y-3" style="color: var(--ink-soft);">
+            <li class="flex gap-4"><span class="display text-xl" style="color: var(--accent); min-width: 30px;">1.</span><span><strong>Identify striking-distance keywords</strong> — terms ranking #5–#20 with meaningful volume. The cheapest wins.</span></li>
+            <li class="flex gap-4"><span class="display text-xl" style="color: var(--accent); min-width: 30px;">2.</span><span><strong>Identify the gap</strong> — content depth? Backlinks? Internal links? Technical issue?</span></li>
+            <li class="flex gap-4"><span class="display text-xl" style="color: var(--accent); min-width: 30px;">3.</span><span><strong>Fix the gap</strong> — expand the article, point internal links at it, build a backlink, fix CWV.</span></li>
+            <li class="flex gap-4"><span class="display text-xl" style="color: var(--accent); min-width: 30px;">4.</span><span><strong>Wait 2–6 weeks</strong>, measure, document what worked.</span></li>
+          </ol>
+          <p class="mt-6" style="color: var(--ink-soft);">Most ranking gains come from this loop — not from publishing yet another new article.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- STAIRS IMAGE -->
+<!-- ====================================================== -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <figure>
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&auto=format&fit=crop"
+         alt="Minimal architectural staircase"
+         class="w-full h-[400px] md:h-[500px] object-cover" />
+    <figcaption class="figure-caption">One step at a time. The climb is the strategy.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PHASE 10 — THE EXPLICIT CLIMB -->
+<!-- ====================================================== -->
+<section id="phase-10" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+    <div class="grid md:grid-cols-12 gap-8 items-start">
+      <div class="md:col-span-3">
+        <div class="phase-number">11</div>
+        <div class="phase-eyebrow mt-4">Phase 10</div>
+      </div>
+
+      <div class="md:col-span-9">
+        <h2 class="display text-4xl md:text-5xl leading-tight mb-6" style="font-weight: 400;">
+          The KD climb,<br>
+          <span style="font-style: italic; color: var(--muted);">step by step.</span>
+        </h2>
+        <p class="text-xl mb-10" style="color: var(--ink-soft);">Here, in order, is the move from low KD to high KD.</p>
+
+        <div class="space-y-5">
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">01</div><div style="color: var(--ink-soft);"><strong>Pick the head term you ultimately want.</strong> For Alex: "freelance web designer."</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">02</div><div style="color: var(--ink-soft);"><strong>Map the topical neighborhood.</strong> What 50–100 keywords surround it? Use clustering tools or manual SERP analysis.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">03</div><div style="color: var(--ink-soft);"><strong>Build the pillar page now</strong> — even though it won't rank yet. It exists so spokes have a target.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">04</div><div style="color: var(--ink-soft);"><strong>Publish 20–30 spoke articles</strong> targeting Rung 1 keywords (KD 0–15). Each links to the pillar and to 2–3 other spokes. Each shows real expertise.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">05</div><div style="color: var(--ink-soft);"><strong>Begin earning backlinks via Phase 7 tactics</strong> — especially to the strongest spokes (often the original-research ones).</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">06</div><div style="color: var(--ink-soft);"><strong>As Rung 1 articles start ranking,</strong> mine GSC for adjacent queries they pick up — and build Rung 2 articles around those.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">07</div><div style="color: var(--ink-soft);"><strong>Target a few Rung 3 (KD 30–50) terms</strong> with carefully crafted commercial pages. By now the cluster has signal — these can rank within 2–6 months if competitors aren't dominant.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">08</div><div style="color: var(--ink-soft);"><strong>Refresh the pillar page</strong> with everything you've learned. Internal-link aggressively from the strongest spokes. Pitch it for a few high-value backlinks.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">09</div><div style="color: var(--ink-soft);"><strong>Wait.</strong> Head-term rankings often arrive 9–18 months after the cluster matures. Resist the urge to thrash.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">10</div><div style="color: var(--ink-soft);"><strong>When the pillar enters the top 30,</strong> optimize CTR (title, description, schema), build 3–5 high-quality backlinks pointing directly at it, refresh content. Usually enough to break into the top 10.</div></div>
+          <div class="flex gap-6 items-start"><div class="display text-3xl" style="color: var(--accent); min-width: 60px;">11</div><div style="color: var(--ink-soft);"><strong>From #10 to #1, the work shifts</strong> from content to user-signal optimization. Make the page so good that users who land actually stay and convert. CTR, dwell time, and conversion data are the final mile.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- COMMON MISTAKES -->
+<!-- ====================================================== -->
+<section id="mistakes" class="border-t" style="border-color: var(--border); background: var(--paper);">
+  <div class="max-w-3xl mx-auto px-6 py-24">
+    <div class="phase-eyebrow mb-4">Chapter 12</div>
+    <h2 class="display text-4xl md:text-5xl leading-tight mb-10" style="font-weight: 400;">
+      Common mistakes that stall sites.
+    </h2>
+
+    <ul class="list-none space-y-4" style="color: var(--ink-soft);">
+      <li class="checklist-item"><strong>Publishing without keyword research.</strong> "Whatever I felt like writing this week" rarely matches search demand.</li>
+      <li class="checklist-item"><strong>Targeting head terms first.</strong> No new site ranks for "web designer" in month one. Start at the bottom.</li>
+      <li class="checklist-item"><strong>Treating the blog as separate from money pages.</strong> The cluster strategy explicitly connects them.</li>
+      <li class="checklist-item"><strong>Generic AI-generated content at scale.</strong> The Helpful Content System detects it. Use AI as a research/drafting assistant, not as the author.</li>
+      <li class="checklist-item"><strong>Ignoring search intent.</strong> A blog post will not rank for a transactional query, no matter how well written.</li>
+      <li class="checklist-item"><strong>Chasing every algorithm rumor.</strong> Fundamentals — useful content, technical hygiene, real authority — outlast every update.</li>
+      <li class="checklist-item"><strong>Building links faster than you build content.</strong> Link velocity that outpaces content growth looks unnatural.</li>
+      <li class="checklist-item"><strong>Not tracking which content actually converts.</strong> Ranking is a means to revenue, not the goal.</li>
+      <li class="checklist-item"><strong>Abandoning the site before authority compounds.</strong> SEO timelines are 6–18 months. Most people quit at month 4.</li>
+      <li class="checklist-item"><strong>Ignoring AI Overviews.</strong> In 2026 they appear on a large share of informational queries. To be cited: structured content, clear question-answer formatting, schema, and strong topical authority — the same things that make you rank.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- 12 MONTH CALENDAR -->
+<!-- ====================================================== -->
+<section id="calendar" class="border-t" style="border-color: var(--border);">
+  <div class="max-w-5xl mx-auto px-6 py-24">
+    <div class="phase-eyebrow mb-4">Chapter 13</div>
+    <h2 class="display text-4xl md:text-5xl leading-tight mb-10" style="font-weight: 400;">
+      A 12-month operating calendar.
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table class="table-editorial">
+        <thead>
+          <tr>
+            <th style="width: 80px;">Month</th>
+            <th>Focus</th>
+            <th>Deliverable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>0</strong></td>
+            <td>Strategy, niche, keyword universe</td>
+            <td>Keyword sheet, sitemap plan, brand basics</td>
+          </tr>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>Tech foundation + first 8 articles</td>
+            <td>Site live, GSC verified, CWV green, 8 Rung-1 articles, pillar drafted</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>Content velocity</td>
+            <td>+10 articles, internal linking pass</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>First link-building push</td>
+            <td>+8 articles, 3–5 quality backlinks, original research published</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>Rung 2 expansion</td>
+            <td>+10 articles (mix Rung 1/2), refresh weakest performers</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td>Pillar launch + commercial pages</td>
+            <td>Pillar live, service pages optimized, 5 more backlinks</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td>Audit + iterate</td>
+            <td>Full technical audit, content refresh sprint, GSC striking-distance pass</td>
+          </tr>
+          <tr>
+            <td><strong>7–8</strong></td>
+            <td>Rung 3 push</td>
+            <td>Commercial-investigation content, comparison pages, +15 articles</td>
+          </tr>
+          <tr>
+            <td><strong>9</strong></td>
+            <td>Authority deepening</td>
+            <td>Podcast tour, guest posts, original data study #2</td>
+          </tr>
+          <tr>
+            <td><strong>10–11</strong></td>
+            <td>Head-term assault</td>
+            <td>Pillar refresh, internal link boost, targeted backlinks to pillar</td>
+          </tr>
+          <tr>
+            <td><strong>12</strong></td>
+            <td>Review and replan</td>
+            <td>Full performance review, next-year plan based on what's working</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lift-box mt-10">
+      <p style="margin: 0; color: var(--ink-soft);">
+        By month 12, a well-executed plan in a defensible niche typically produces: <strong>50–150 indexed pages, 30–60 keywords ranking on page one, 5–20 keywords in the top 3, real organic leads,</strong> and a credible shot at the head term within months 13–18.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- FINAL NOTE -->
+<!-- ====================================================== -->
+<section class="border-t relative" style="border-color: var(--border); background: var(--ink); color: #f3ecdc;">
+  <div class="max-w-3xl mx-auto px-6 py-32">
+    <div class="phase-eyebrow mb-6" style="color: var(--accent);">Final note</div>
+    <h2 class="display text-4xl md:text-5xl leading-tight mb-10" style="font-weight: 400; color: #faf6ee;">
+      What separates sites that<br>
+      <em style="color: var(--accent);">actually reach #1.</em>
+    </h2>
+
+    <p class="text-xl mb-8" style="color: #f3ecdc;">
+      I've watched many sites execute the technical plan flawlessly and still stall. The difference is almost always one of three things.
+    </p>
+
+    <ol class="list-none space-y-6">
+      <li>
+        <div class="phase-eyebrow mb-2" style="color: var(--accent);">One</div>
+        <p class="text-lg display" style="font-weight: 400; line-height: 1.45; color: #faf6ee;">
+          Genuine differentiation. The ranking page actually says something the other pages don't. Original opinions, original data, original case studies.
+        </p>
+      </li>
+      <li>
+        <div class="phase-eyebrow mb-2" style="color: var(--accent);">Two</div>
+        <p class="text-lg display" style="font-weight: 400; line-height: 1.45; color: #faf6ee;">
+          Real expertise visible on the page. A reader who lands on the article knows, within 30 seconds, that they're reading someone who actually does this work — not a content writer summarizing other articles.
+        </p>
+      </li>
+      <li>
+        <div class="phase-eyebrow mb-2" style="color: var(--accent);">Three</div>
+        <p class="text-lg display" style="font-weight: 400; line-height: 1.45; color: #faf6ee;">
+          Persistence past the discouraging middle. The growth curve isn't linear. Months 4–7 often feel flat. Sites that ship through that period reach the inflection. Sites that quit don't.
+        </p>
+      </li>
+    </ol>
+
+    <div class="ornament" style="margin-top: 80px;">
+      <span style="font-size: 24px;">✦</span>
+    </div>
+
+    <p class="text-center pull-quote" style="color: #f3ecdc; font-size: 22px;">
+      The plan above gets you the <em style="color: var(--accent);">opportunity</em> to rank.<br>
+      Those three things get you the <em style="color: var(--accent);">result</em>.
+    </p>
+  </div>
+</section>
+
+
+<!-- ====================================================== -->
+<!-- FOOTER -->
+<!-- ====================================================== -->
+<footer style="background: var(--ink); color: #6b6253; border-top: 1px solid #2a2a2a;">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div>
+      <div class="display text-lg" style="color: #faf6ee;">The SEO Playbook</div>
+      <div class="mono text-xs mt-1" style="letter-spacing: 0.2em;">FROM ZERO TO RANK #1 · EDITION ONE</div>
+    </div>
+    <div class="text-sm" style="color: #6b6253;">
+      A field manual for the long game.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
